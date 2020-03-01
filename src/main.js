@@ -1,5 +1,5 @@
 /*
- * @Descripttion: 
+ * @Descripttion:
  * @Author: yulingjia
  * @Date: 2020-03-01 17:30:48
  * @LastEditTime: 2020-03-01 20:46:12
@@ -23,18 +23,18 @@ import VOrgTree from 'v-org-tree'
 import 'v-org-tree/dist/v-org-tree.css'
 
 import axios from 'axios'
+import VueAMap from 'vue-amap'
+
 Vue.prototype.$http = axios
 
-import VueAMap from 'vue-amap';
-
-Vue.use(VueAMap);
+Vue.use(VueAMap)
 VueAMap.initAMapApiLoader({
   key: '4d187160db736967d288d08ba647e220',
   plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
   // 默认高德 sdk 版本为 1.4.4
-  v: '1.4.4'
-});
-
+  v: '1.4.4',
+  uiVersion: '1.0.11'
+})
 
 // 实际打包时应该不引入mock
 /* eslint-disable */
