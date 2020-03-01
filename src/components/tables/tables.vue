@@ -27,56 +27,41 @@ export default {
       deviceCode: '',
       lastdata: [],
       columns: [
+
         {
-          title: "编号",
-          key: "id",
-          width: 100,
-          fixed: "left",
-          render: (h, params) => {
-            return h("div", [
-              h("Icon", {
-                props: {
-                  type: "person"
-                }
-              }),
-              h("strong", params.row.id)
-            ]);
-          }
+          title: '设备号',
+          key: 'deviceCode'
         },
         {
-          title: "设备号",
-          key: "deviceCode"
+          title: '总里程',
+          key: 'mileage'
         },
         {
-          title: "总里程",
-          key: "price"
-        },
-        {
-          title: "Action",
-          key: "action",
+          title: 'Action',
+          key: 'action',
           width: 150,
-          align: "center",
+          align: 'center',
           render: (h, params) => {
-            return h("div", [
+            return h('div', [
               h(
-                "Button",
+                'Button',
                 {
                   props: {
-                    type: "primary",
-                    size: "small"
+                    type: 'primary',
+                    size: 'small'
                   },
                   style: {
-                    marginRight: "5px"
+                    marginRight: '5px'
                   },
                   on: {
                     click: () => {
-                      this.show(params.index);
+                      this.show(params.index)
                     }
                   }
                 },
-                "View"
+                'View'
               )
-            ]);
+            ])
           }
         }
       ]
