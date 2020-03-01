@@ -9,7 +9,7 @@ export const getMapData = (data) => {
   })
 }
 
-// 车辆分页 
+// 车辆分页
 export const getTableData = (data) => {
   return axios.request({
     url: `/api/contest/sample/findPageList/${data.pageNum}/${data.pageSize}`,
