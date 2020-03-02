@@ -128,7 +128,7 @@ export default {
           '#651067', '#329262', '#5574a6', '#3b3eac'
         ]
 
-        let dataUrl = '/api/contest/sample/queryTrack'
+        let dataUrl = '/api/position/query'
         let param = {
           'deviceCode': me.formInline.deviceCode,
           'startTime': moment(me.formInline.startTime).format('YYYY-MM-DD HH:mm:ss'),
