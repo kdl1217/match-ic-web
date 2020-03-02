@@ -1,4 +1,5 @@
 import Main from '@/components/main'
+// eslint-disable-next-line no-unused-vars
 import parentView from '@/components/parent-view'
 
 /**
@@ -30,7 +31,8 @@ export default [
   {
     path: '/',
     name: '_home',
-    redirect: '/components/tables_page',
+    // redirect: '/components/tables_page',split_pane_page
+    redirect: '/components/split_pane_page',
     component: Main,
     meta: {
       hideInMenu: true,
@@ -170,15 +172,15 @@ export default [
       //   },
       //   component: () => import('@/view/components/cropper/cropper.vue')
       // },
-      {
-        path: 'tables_page',
-        name: 'tables_page',
-        meta: {
-          icon: 'md-grid',
-          title: '车辆展示'
-        },
-        component: () => import('@/view/components/tables/tables.vue')
-      },
+      // {
+      //   path: 'tables_page',
+      //   name: 'tables_page',
+      //   meta: {
+      //     icon: 'md-grid',
+      //     title: '车辆展示'
+      //   },
+      //   component: () => import('@/view/components/tables/tables.vue')
+      // },
       {
         path: 'split_pane_page',
         name: 'split_pane_page',
