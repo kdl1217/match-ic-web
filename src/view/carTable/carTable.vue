@@ -16,7 +16,6 @@
   </div>
 </template>
 <script>
-import { getTableData } from '@/api/data'
 export default {
   data () {
     return {
@@ -94,15 +93,26 @@ export default {
     getTableData (val) {
       this.current = val || 1
       this.loading = true
-      getTableData({
+      let dataUrl = '/api/position/page'
+      let param = {
         pageNum1: this.current,
         pageSize1: this.size,
         deviceCode1: this.deviceCode
-      }).then(res => {
+      }
+      this.$http.get(dataUrl, { params: param }).then(res => {
         this.loading = false
         this.lastdata = res.data.data.list
         this.total = res.data.data.total
       })
+      // getTableData({
+      //   pageNum1: this.current,
+      //   pageSize1: this.size,
+      //   deviceCode1: this.deviceCode
+      // }).then(res => {
+      //   this.loading = false
+      //   this.lastdata = res.data.data.list
+      //   this.total = res.data.data.total
+      // })
     }
   }
 }
