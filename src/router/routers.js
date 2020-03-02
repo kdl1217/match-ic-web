@@ -172,15 +172,15 @@ export default [
       //   },
       //   component: () => import('@/view/components/cropper/cropper.vue')
       // },
-      // {
-      //   path: 'tables_page',
-      //   name: 'tables_page',
-      //   meta: {
-      //     icon: 'md-grid',
-      //     title: '车辆展示'
-      //   },
-      //   component: () => import('@/view/components/tables/tables.vue')
-      // },
+      {
+        path: 'tables_page',
+        name: 'tables_page',
+        meta: {
+          icon: 'md-grid',
+          title: '车辆展示'
+        },
+        component: () => import('@/view/components/tables/tables.vue')
+      },
       {
         path: 'split_pane_page',
         name: 'split_pane_page',

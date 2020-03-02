@@ -1,5 +1,5 @@
 /*
- * @Descripttion: 
+ * @Descripttion:
  * @Author: yulingjia
  * @Date: 2020-03-01 16:43:42
  * @LastEditTime: 2020-03-01 20:54:10
@@ -44,6 +44,6 @@ module.exports = {
   productionSourceMap: false,
   // 这里写你调用接口的基础路径，来解决跨域，如果设置了代理，那你本地开发环境的axios的baseUrl要写为 '' ，即空字符串
   devServer: {
-    proxy: 'http://112.124.3.139:30000/'
+    proxy: 'http://47.114.170.66:9090/'
   }
 }

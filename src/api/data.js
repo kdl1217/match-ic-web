@@ -3,7 +3,7 @@ import axios from '@/libs/api.request'
 // 轨迹
 export const getMapData = (data) => {
   return axios.request({
-    url: '/api/contest/sample/queryTrack',
+    url: '/api/position/query',
     method: 'get',
     params: data
   })
@@ -12,10 +12,12 @@ export const getMapData = (data) => {
 // 车辆分页
 export const getTableData = (data) => {
   return axios.request({
-    url: `/api/contest/sample/findPageList/${data.pageNum}/${data.pageSize}`,
+    url: `/api/position/page`,
     method: 'get',
     params: {
-      deviceCode: data.deviceCode
+      pageNum: data.pageNum,
+      pageSize: data.pageSize,
+      deviceId: data.deviceId
     }
   })
 }
