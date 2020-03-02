@@ -29,12 +29,32 @@ export default {
       columns: [
 
         {
-          title: '设备号',
-          key: 'deviceCode'
+          title: 'id',
+          key: 'id'
         },
         {
-          title: '总里程',
-          key: 'mileage'
+          title: '设备号',
+          key: 'deviceId'
+        },
+        {
+          title: '距离',
+          key: 'distance'
+        },
+        {
+          title: '速度',
+          key: 'speed'
+        },
+        {
+          title: '经度',
+          key: 'longitude'
+        },
+        {
+          title: '纬度',
+          key: 'latitude'
+        },
+        {
+          title: '上报时间',
+          key: 'collectTime'
         },
         {
           title: 'Action',
@@ -71,24 +91,25 @@ export default {
     this.getTableData()
   },
   methods: {
-    getTableData () {
+    getTableData (val) {
+      this.current = val || 1
       this.loading = true
       getTableData({
-        pageNum: this.current,
-        pageSize: this.size,
-        deviceCode: this.deviceCode
+        pageNum1: this.current,
+        pageSize1: this.size,
+        deviceCode1: this.deviceCode
       }).then(res => {
         this.loading = false
-        this.lastdata = res.data.list
-        this.total = res.data.totalData
+        this.lastdata = res.data.data.list
+        this.total = res.data.data.total
       })
     }
   }
 }
 </script>
 <style>
-.pro-page {
-  position: fixed;
-  height: 500px;
-}
+  .pro-page {
+    position: fixed;
+    height: 500px;
+  }
 </style>

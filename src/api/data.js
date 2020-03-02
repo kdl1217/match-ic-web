@@ -15,9 +15,9 @@ export const getTableData = (data) => {
     url: `/api/position/page`,
     method: 'get',
     params: {
-      pageNum: data.pageNum,
-      pageSize: data.pageSize,
-      deviceId: data.deviceId
+      pageNum: data.pageNum1,
+      pageSize: data.pageSize1,
+      deviceId: data.deviceId1
     }
   })
 }
