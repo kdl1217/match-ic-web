@@ -179,7 +179,7 @@ export default [
           icon: 'md-grid',
           title: '车辆展示'
         },
-        component: () => import('@/view/components/tables/tables.vue')
+        component: () => import('@/view/carTable/carTable.vue')
       },
       {
         path: 'split_pane_page',

@@ -12,7 +12,7 @@ export const getMapData = (data) => {
 // 车辆分页
 export const getTableData = (data) => {
   return axios.request({
-    url: `/api/position/page`,
+    url: '/api/position/page',
     method: 'get',
     params: {
       pageNum: data.pageNum1,
